@@ -1,0 +1,77 @@
+// bower:scss
+// endbower
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  // border: 1px solid black;
+}
+
+body {
+  white-space: nowrap;
+}
+
+.hex:before {
+    content: " ";
+    width: 0; height: 0;
+    border-bottom: 30px solid #6C6;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    position: absolute;
+    top: -30px;
+}
+
+.hex.blue:before {
+  border-bottom: 30px solid blue;
+}
+
+.hex {
+    margin-top: 30px;
+    width: 104px;
+    height: 60px;
+    background-color: #6C6;
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+}
+
+.hex:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -30px;
+    border-top: 30px solid #6C6;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+
+.hex.blue:after {
+    border-top: 30px solid blue;
+}
+
+.rowBox {
+  height: 0px;
+  // margin: -4px;
+  border: none;
+}
+
+.offBox {
+  width: 57px;
+  height: 90px;
+  // background-color: black;
+  display: inline-block;
+}
+
+.heightBox {
+  height: 90px;
+  // background-color: black;
+  display: inline-block;
+}
+
+.hex.blue {
+  background-color: blue;
+}
