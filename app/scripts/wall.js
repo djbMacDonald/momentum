@@ -1,4 +1,4 @@
-function setUp(){
+function setUpBorder(){
   clearSelected();
   $('.hex').click(function(){
     startBorder(this);
@@ -21,7 +21,7 @@ function selectAdj(obj){
     (function(i){
       hex.click(function(){
         createBorder(obj, adj[i]['direction']);
-        setUp();
+        setUpBorder();
       });
     })(i);
   };
@@ -97,7 +97,3 @@ function createBorder(obj, direction){
   }
   $(obj).append(border);
 };
-
-$(document).ready(function(){
-  setUp();
-});

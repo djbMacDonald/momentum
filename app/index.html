@@ -32,16 +32,31 @@
 
     <div id='menu'>
       <img src="../images/hamburger.png" class='hamburger'>
-      <button class='place' onclick="setMode('placeTroops')">Place Troops</button>
-      <button class='place' onclick="setMode('placeShips')">Place Ships</button>
-      <button class='place' onclick="setMode('placeObstacles')">Place Obstacles</button>
-      <button class='move' onclick="setMode('moveTroops')">Move Troops</button>
-      <button class='move' onclick="setMode('steerShips')">Steer Ships</button>
-      <button class='remove' onclick="setMode('remove')">Remove</button>
-      <button class='advance' onclick="advanceShips()">Advance Ships</button>
+      <button class='place base' onclick="setMode('placeTroops')">Place Troops</button>
+      <button class='place base' onclick="setMode('placeShips')">Place Ships</button>
+      <button class='place base' onclick="setMode('placeObstacles')">Place Obstacles</button>
+      <button class='move base' onclick="setMode('moveTroops')">Move Troops</button>
+      <button class='move base' onclick="setMode('steerShips')">Steer Ships</button>
+      <button class='remove base' onclick="setMode('remove')">Remove</button>
+      <button class='advance base' onclick="advanceShips()">Advance Ships</button>
+
+      <button class='place obstacle hidden' onclick="setMode('object')">Object</button>
+      <button class='place obstacle hidden' onclick="setMode('wall')">Wall</button>
+      <button class='move obstacle back hidden' onclick='back()'>Back</button>
+
+      <button class='place object barrier hidden' onclick='setObject("barrier")'></button>
+      <button class='place object bio hidden' onclick='setObject("barrier")'></button>
+      <button class='place object bomb hidden' onclick='setObject("barrier")'></button>
+      <button class='place object crowd hidden' onclick='setObject("barrier")'></button>
+      <button class='place object fire hidden' onclick='setObject("barrier")'></button>
+      <button class='place object radiation hidden' onclick='setObject("barrier")'></button>
+      <button class='place object rocks hidden' onclick='setObject("barrier")'></button>
+      <button class='place object skull hidden' onclick='setObject("barrier")'></button>
+      <button class='place object storm hidden' onclick='setObject("barrier")'></button>
+      <button class='place object table hidden' onclick='setObject("barrier")'></button>
+      <button class='move back object hidden' onclick='back()'>Back</button>
+
     </div>
-
-
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -54,8 +69,8 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/grid.js"></script>
     <script src="scripts/common.js"></script>
-    <!-- <script src="scripts/border.js"></script> -->
-    <!-- <script src="scripts/placement.js"></script> -->
+    <script src="scripts/wall.js"></script>
+    <script src="scripts/placeTroops.js"></script>
     <!-- endbuild -->
 
   </body>

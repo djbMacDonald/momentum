@@ -2,12 +2,15 @@
   border: 5px solid blue;
   border-radius: 15px;
   width: 200px;
+  height: 440px;
   position: fixed;
   bottom: 10px;
   right: 10px;
   z-index: 100;
+  padding-top: 5px;
   background-color: #9ED9FE;
   &.hidden {
+    height: 0px;
     > button {
       display: none;
     }
@@ -43,6 +46,58 @@ button {
   &.active {
     background-color: lightGrey;
   }
+  &.obstacle {
+    height: 30%;
+  }
+  &.back:active {
+    background-color: orange;
+  }
+  &.object {
+    margin: 6px 10px;
+    display: block;
+    float: left;
+    width: 75px;
+    height: 60px;
+    background-size: 51px auto;
+    background-position: 7px 0px;
+    background-repeat: no-repeat;
+    background-image: url('../images/objects.png');
+    &.bio{
+      background-position: 7px -51px;
+    }
+    &.bomb{
+      background-position: 7px -102px;
+    }
+    &.crowd{
+      background-position: 7px -153px;
+    }
+    &.fire{
+      background-position: 7px -204px;
+    }
+    &.radiation{
+      background-position: 7px -257px;
+    }
+    &.rocks{
+      background-position: 7px -306px;
+    }
+    &.skull{
+      background-position: 7px -357px;
+    }
+    &.storm{
+      background-position: 7px -408px;}
+    &.table{
+      background-position: 7px -459px;
+    }
+    &.back{
+      background-image: none;
+      margin-left: 20px;
+      margin-top: 0px;
+      width: 150px;
+    }
+  }
+  &.hidden {
+    display: none;
+  }
 }
 
 .hamburger {
@@ -55,3 +110,4 @@ button {
   background-color: white;
   cursor: pointer;
 }
+

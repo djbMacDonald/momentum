@@ -1,4 +1,4 @@
-function startPlacement(){
+function setUpTroops(){
   clearSelected();
   $('.hex').unbind();
   $('.hex').click(function(){
@@ -31,9 +31,3 @@ function placeImage(obj){
     $obj.toggleClass('arrow1');
   }
 };
-
-
-
-$(document).ready(function(){
-  startPlacement();
-});
