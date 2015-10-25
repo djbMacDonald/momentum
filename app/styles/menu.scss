@@ -1,0 +1,52 @@
+#menu {
+  border: 5px solid blue;
+  border-radius: 15px;
+  width: 200px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+  background-color: #9ED9FE;
+  &.hidden {
+    // height: 10px;
+    > button {
+      display: none;
+    }
+  }
+}
+
+button {
+  display: block;
+  font-size: 1.4em;
+  padding: 10px;
+  margin: 10px auto;
+  // color: #ccc;
+  background-color: white;
+
+  border-radius: 15px;
+  cursor: pointer;
+  width: 94%;
+  height: 50px;
+  &.place {
+    border: 5px solid blue;
+  }
+  &.move {
+    border: 5px solid orange;
+  }
+  &.advance {
+    border: 5px solid green;
+  }
+  &.remove {
+    border: 5px solid red;
+  }
+}
+
+.hamburger {
+  width: 40px;
+  position: absolute;
+  top: -32px;
+  right: -10px;
+  border: 3px solid black;
+  border-radius: 6px;
+  background-color: white;
+}
