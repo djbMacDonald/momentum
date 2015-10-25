@@ -32,13 +32,13 @@
 
     <div id='menu'>
       <img src="../images/hamburger.png" class='hamburger'>
-      <button class='place' >Place Troops</button>
-      <button class='place' >Place Ships</button>
-      <button class='place' >Place Obstacle</button>
-      <button class='move' >Move Troops</button>
-      <button class='move' >Steer Ships</button>
-      <button class='advance' >Advance Ships</button>
-      <button class='remove' >Remove</button>
+      <button class='place' onclick="setMode('placeTroops')">Place Troops</button>
+      <button class='place' onclick="setMode('placeShips')">Place Ships</button>
+      <button class='place' onclick="setMode('placeObstacles')">Place Obstacles</button>
+      <button class='move' onclick="setMode('moveTroops')">Move Troops</button>
+      <button class='move' onclick="setMode('steerShips')">Steer Ships</button>
+      <button class='remove' onclick="setMode('remove')">Remove</button>
+      <button class='advance' onclick="advanceShips()">Advance Ships</button>
     </div>
 
 

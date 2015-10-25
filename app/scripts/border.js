@@ -1,6 +1,5 @@
 function setUp(){
   clearSelected();
-  $('.hex').unbind();
   $('.hex').click(function(){
     startBorder(this);
   });
@@ -26,6 +25,9 @@ function selectAdj(obj){
       });
     })(i);
   };
+  $('.hex').not('.adj').not('.selected').click(function(){
+    startBorder(this);
+  });
 };
 
 function findAdj(obj){

@@ -8,7 +8,6 @@
   z-index: 100;
   background-color: #9ED9FE;
   &.hidden {
-    // height: 10px;
     > button {
       display: none;
     }
@@ -17,16 +16,15 @@
 
 button {
   display: block;
-  font-size: 1.4em;
+  font-size: 20px;
   padding: 10px;
   margin: 10px auto;
-  // color: #ccc;
   background-color: white;
-
   border-radius: 15px;
   cursor: pointer;
   width: 94%;
   height: 50px;
+  line-height: 20px;
   &.place {
     border: 5px solid blue;
   }
@@ -35,9 +33,15 @@ button {
   }
   &.advance {
     border: 5px solid green;
+    &:active {
+      background-color: green;
+    }
   }
   &.remove {
     border: 5px solid red;
+  }
+  &.active {
+    background-color: lightGrey;
   }
 }
 
@@ -49,4 +53,5 @@ button {
   border: 3px solid black;
   border-radius: 6px;
   background-color: white;
+  cursor: pointer;
 }
