@@ -1,7 +1,13 @@
-var numRows = 0;
 
-function addRow(){
-  if (numRows % 2 == 1) {
+
+function createGrid(){
+  for (var i = 0; i < 20; i++){
+    createRow(i);
+  };
+};
+
+function createRow(row){
+  if (row % 2 == 1){
     var offBox = $('<div>');
     offBox.addClass('offBox');
     $('body').append(offBox);
@@ -11,32 +17,23 @@ function addRow(){
     $('body').append(heightBox);
   };
 
-  for(var i = 0; i < 10; i++) {
-    var mid = $('<div>');
-    mid.addClass('hex');
-    $('body').append(mid);
+  for (var i = 0; i < 20; i++){
+    createHex(row,i);
   };
 
   var rowBox = $('<div>');
   rowBox.addClass('rowBox');
   $('body').append(rowBox);
+};
 
-  numRows++;
-
+function createHex(row, col){
+  var hex = $('<div>');
+  hex.addClass('hex');
+  hex.attr("data-row", row);
+  hex.attr("data-col", col-Math.floor(row/2));
+  $('body').append(hex);
 };
 
 $(document).ready(function(){
-  console.log('ready');
-
-  for (var i = 0; i < 5; i++) {
-    addRow();
-  };
-
-  $('#circle').click(function(){
-    console.log('circle');
-  });
-  $('.hex').click(function(){
-    $(this).toggleClass('blue');
-  });
-
+  createGrid();
 });
