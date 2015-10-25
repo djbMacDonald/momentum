@@ -1,6 +1,6 @@
 function setUp(){
   clearSelected();
-  $('*').unbind();
+  $('.hex').unbind();
   $('.hex').click(function(){
     startBorder(this);
   });
@@ -11,10 +11,6 @@ function startBorder(obj){
   clearSelected();
   $(obj).addClass('selected');
   selectAdj(obj);
-};
-
-function clearSelected(){
-  $('*').removeClass('selected').removeClass('adj');
 };
 
 function selectAdj(obj){

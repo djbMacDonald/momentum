@@ -1,0 +1,76 @@
+.hex:before {
+  content: " ";
+  width: 0; height: 0;
+  border-bottom: 30px solid #6C6;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+  position: absolute;
+  top: -30px;
+}
+
+.hex.selected:before {
+  border-bottom: 30px solid blue;
+}
+
+.hex.adj:before {
+  border-bottom: 30px solid orange;
+}
+
+.hex {
+  margin-top: 30px;
+  width: 104px;
+  height: 60px;
+  background-color: #6C6;
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  background-size: auto 60px;
+  background-repeat: no-repeat;
+  &.arrow1 {
+    background-image: url('../images/arrow1.png');
+  }
+  &.ur {
+    background-position: 22px 0px;
+  }
+  &.right {
+    background-position: -98px 0px;
+  }
+  &.lr {
+    background-position: -218px 0px;
+  }
+  &.ll {
+    background-position: -338px 0px;
+  }
+  &.left {
+    background-position: -468px 0px;
+  }
+  &.ul {
+    background-position: -578px 0px;
+  }
+}
+
+.hex.selected {
+  background-color: blue;
+}
+
+.hex.adj {
+  background-color: orange;
+}
+
+.hex:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -30px;
+    border-top: 30px solid #6C6;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+
+.hex.selected:after {
+    border-top: 30px solid blue;
+}
+
+.hex.adj:after {
+    border-top: 30px solid orange;
+}
