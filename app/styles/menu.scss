@@ -9,8 +9,10 @@
   z-index: 100;
   padding-top: 5px;
   background-color: #9ED9FE;
+  opacity: 0.88;
   &.hidden {
     height: 0px;
+    padding: 0px;
     > button {
       display: none;
     }
@@ -44,7 +46,7 @@ button {
     border: 5px solid red;
   }
   &.active {
-    background-color: lightGrey;
+    background-color: #838383;
   }
   &.obstacle {
     height: 30%;
@@ -86,6 +88,50 @@ button {
     &.storm{
       background-position: 7px -408px;}
     &.table{
+      background-position: 7px -459px;
+    }
+    &.back{
+      background-image: none;
+      margin-left: 20px;
+      margin-top: 0px;
+      width: 150px;
+    }
+  }
+  &.troop{
+    margin: 6px 10px;
+    display: block;
+    float: left;
+    width: 75px;
+    height: 60px;
+    background-size: 51px auto;
+    background-position: 7px 0px;
+    background-repeat: no-repeat;
+    background-image: url('../images/troops.png');
+    &.book {
+      background-position: 7px -51px;
+    }
+    &.bow {
+      background-position: 7px -102px;
+    }
+    &.doctor {
+      background-position: 7px -153px;
+    }
+    &.knight {
+      background-position: 7px -204px;
+    }
+    &.pistol {
+      background-position: 7px -255px;
+    }
+    &.shoe {
+      background-position: 7px -306px;
+    }
+    &.shotgun {
+      background-position: 7px -357px;
+    }
+    &.shovel {
+      background-position: 7px -408px;
+    }
+    &.sword {
       background-position: 7px -459px;
     }
     &.back{

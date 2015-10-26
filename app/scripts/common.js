@@ -20,9 +20,11 @@ function setMode(mode){
   switch(mode){
     case "placeObstacles":
       obstacleMenu();
+      $('.active').removeClass('active');
     break;
     case "placeTroops":
-      setUpTroops();
+      troopMenu();
+      $('.active').removeClass('active');
     break;
     case "object":
       objectMenu();
@@ -58,6 +60,11 @@ function obstacleMenu(){
 function objectMenu(){
   $('.obstacle').toggleClass('hidden');
   $('.object').toggleClass('hidden');
+};
+
+function troopMenu(){
+  $('.base').toggleClass('hidden');
+  $('.troop').toggleClass('hidden');
 };
 
 function advanceShips(){

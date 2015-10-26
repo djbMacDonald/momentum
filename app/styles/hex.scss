@@ -24,37 +24,95 @@
   position: relative;
   display: inline-block;
   margin: 5px;
-  background-size: auto 60px;
   background-repeat: no-repeat;
-  &.arrow1 {
-    background-image: url('../images/arrow1.png');
-  }
-  &.ur {
+  &.object {
+    background-image: url('../images/objects.png');
+    background-size: 60px auto;
     background-position: 22px 0px;
+    &.bio{
+      background-position: 22px -60px;
+    }
+    &.bomb{
+      background-position: 22px -120px;
+    }
+    &.crowd{
+      background-position: 22px -180px;
+    }
+    &.fire{
+      background-position: 22px -240px;
+    }
+    &.radiation{
+      background-position: 22px -300px;
+    }
+    &.rocks{
+      background-position: 22px -360px;
+    }
+    &.skull{
+      background-position: 22px -420px;
+    }
+    &.storm{
+      background-position: 22px -480px;
+    }
+    &.table{
+      background-position: 22px -540px;
+    }
   }
-  &.right {
-    background-position: -98px 0px;
+  &.troop {
+    background-size: 60px auto;
+    background-position: 22px 0px;
+    &.axe {
+      background-image: url('../images/axe.png');
+    }
+    &.book {
+      background-image: url('../images/book.png');
+    }
+    &.bow {
+      background-image: url('../images/bow.png');
+    }
+    &.doctor {
+      background-image: url('../images/doctor.png');
+    }
+    &.knight {
+      background-image: url('../images/knight.png');
+    }
+    &.pistol {
+      background-image: url('../images/pistol.png');
+    }
+    &.shoe {
+      background-image: url('../images/shoe.png');
+    }
+    &.shotgun {
+      background-image: url('../images/shotgun.png');
+    }
+    &.shovel {
+      background-image: url('../images/shovel.png');
+    }
+    &.sword {
+      background-image: url('../images/sword.png');
+    }
+    &.right {
+      background-position: 22px -60px;
+    }
+    &.lr {
+      background-position: 22px -120px;
+    }
+    &.ll {
+      background-position: 22px -180px;
+    }
+    &.left {
+      background-position: 22px -240px;
+    }
+    &.ul {
+      background-position: 22px -300px;
+    }
   }
-  &.lr {
-    background-position: -218px 0px;
+  &.selected {
+    background-color: blue;
   }
-  &.ll {
-    background-position: -338px 0px;
-  }
-  &.left {
-    background-position: -468px 0px;
-  }
-  &.ul {
-    background-position: -578px 0px;
-  }
-}
 
-.hex.selected {
-  background-color: blue;
-}
-
-.hex.adj {
-  background-color: orange;
+  &.adj {
+    background-color: orange;
+  }
 }
 
 .hex:after {

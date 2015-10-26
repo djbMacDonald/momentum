@@ -1,33 +1,15 @@
-function setUpTroops(){
+function setTroop(mode){
   clearSelected();
   $('.hex').unbind();
+  $('button').removeClass('active');
+  $('.' + mode).addClass('active');
   $('.hex').click(function(){
-    placeImage(this);
+    placeTroop(this, mode);
   });
 };
 
-function placeImage(obj){
-  var $obj = $(obj);
-  if (!$obj.hasClass('arrow1')) {
-    $obj.toggleClass('arrow1');
-    $obj.toggleClass('ur');
-  } else if ($obj.hasClass('ur')) {
-    $obj.toggleClass('ur');
-    $obj.toggleClass('right');
-  } else if ($obj.hasClass('right')) {
-    $obj.toggleClass('right');
-    $obj.toggleClass('lr');
-  } else if ($obj.hasClass('lr')) {
-    $obj.toggleClass('lr');
-    $obj.toggleClass('ll');
-  } else if ($obj.hasClass('ll')) {
-    $obj.toggleClass('ll');
-    $obj.toggleClass('left');
-  } else if ($obj.hasClass('left')) {
-    $obj.toggleClass('left');
-    $obj.toggleClass('ul');
-  } else if ($obj.hasClass('ul')) {
-    $obj.toggleClass('ul');
-    $obj.toggleClass('arrow1');
-  }
+function placeTroop(obj, mode){
+  $(obj).removeClass('axe').removeClass('book').removeClass('bow').removeClass('doctor').removeClass('knight').removeClass('pistol').removeClass('shoe').removeClass('shotgun').removeClass('shovel').removeClass('sword');
+  $(obj).removeClass('ur').removeClass('right').removeClass('lr').removeClass('ll').removeClass('right').removeClass('ul');
+  $(obj).addClass('troop').addClass(mode);
 };
