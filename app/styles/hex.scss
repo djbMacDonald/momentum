@@ -81,15 +81,6 @@
     &.shoe {
       background-image: url('../images/shoe.png');
     }
-    &.shotgun {
-      background-image: url('../images/shotgun.png');
-    }
-    &.shovel {
-      background-image: url('../images/shovel.png');
-    }
-    &.sword {
-      background-image: url('../images/sword.png');
-    }
     &.right {
       background-position: 22px -60px;
     }
@@ -104,6 +95,66 @@
     }
     &.ul {
       background-position: 22px -300px;
+    }
+  }
+  &.shotgun {
+    background-size: 100px auto;
+    background-position: 2px 0px;
+    background-image: url('../images/shotgun.png');
+    &.right {
+      background-position: 2px -60px;
+    }
+    &.lr {
+      background-position: 2px -120px;
+    }
+    &.ll {
+      background-position: 2px -180px;
+    }
+    &.left {
+      background-position: 2px -240px;
+    }
+    &.ul {
+      background-position: 2px -300px;
+    }
+  }
+  &.shovel {
+    background-size: 80px auto;
+    background-position: 12px 0px;
+    background-image: url('../images/shovel.png');
+    &.right {
+      background-position: 12px -60px;
+    }
+    &.lr {
+      background-position: 12px -120px;
+    }
+    &.ll {
+      background-position: 12px -180px;
+    }
+    &.left {
+      background-position: 12px -240px;
+    }
+    &.ul {
+      background-position: 12px -300px;
+    }
+  }
+  &.sword {
+    background-size: 118px auto;
+    background-position: -6px 0px;
+    background-image: url('../images/sword.png');
+    &.right {
+      background-position: -6px -60px;
+    }
+    &.lr {
+      background-position: -6px -120px;
+    }
+    &.ll {
+      background-position: -6px -180px;
+    }
+    &.left {
+      background-position: -6px -240px;
+    }
+    &.ul {
+      background-position: -6px -300px;
     }
   }
   &.selected {
